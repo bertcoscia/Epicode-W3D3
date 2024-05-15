@@ -1,0 +1,17 @@
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+main {
+    width: 50%;
+    margin: auto;
+    text-align: center;
+}
+
+li {
+    list-style-type: none;
+}
+
+.checked-task {
+    text-decoration: line-through;
+}
