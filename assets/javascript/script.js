@@ -14,7 +14,7 @@ newTask.addEventListener("submit", (event) => {
   // rimuovo il p quando aggiungo un task
   const noTasks = document.getElementById("no-tasks");
   if (noTasks) {
-    noTasks.setAttribute("style", "display: none");
+    noTasks.style.display = "none";
   }
 
   // creo un li e gli do come valore il valore di input
@@ -35,7 +35,7 @@ newTask.addEventListener("submit", (event) => {
   const list = document.getElementById("task-list");
   list.appendChild(taskElement);
 
-  // puluisco l'input
+  // pulisco l'input
   taskNameInput.value = "";
 
   // aggiungo click listener per togglare una classe per sbarrare il testo
@@ -46,6 +46,10 @@ newTask.addEventListener("submit", (event) => {
   // aggiungo click listener per rimuovere il task alla pressione dell'icona
   deleteBtn.addEventListener("click", (event) => {
     taskElement.remove();
+    const remaningTasks = document.querySelectorAll("taskElement");
+    if (remainingTasks.lenght === 0) {
+      noTasks.style.display = "inline-block";
+    }
   });
 
   /* deleteBtn.addEventListener("mouseover", (event) => {
