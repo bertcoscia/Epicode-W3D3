@@ -1,5 +1,7 @@
 body {
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    /* background-color: #3aafa9;
+    color: #feffff; */
 }
 
 main {
@@ -10,8 +12,37 @@ main {
 
 li {
     list-style-type: none;
+    font-size: 30px;
+    font-style: italic;
+    /* border: solid 0.5px black; */
+    border-radius: 35px;
+}
+
+li:hover {
+    font-weight: bold;
+    color: #17252A;
 }
 
 .checked-task {
     text-decoration: line-through;
+    border: none;
+}
+
+ion-icon {
+    display: inline-block;
+}
+
+#form-submit {
+    border: none;
+    background-color: white;
+    display: inline-block;
+    font-size: 35px;
+}
+
+input {
+    /* background-color: #3aafa9;
+    color: #def2f1;
+    border: solid 1px white; */
+padding: 10px 15px;
+border-radius: 35px;
 }

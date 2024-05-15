@@ -6,19 +6,26 @@ newTask.addEventListener("submit", (event) => {
   newTaskName = taskNameInput.value; /* assegno ad una variabile il valore di input */
 
   const task = document.createElement("li");
-  task.classList.add("prova");
   task.innerText = newTaskName;
 
   const list = document.getElementById("task-list");
   list.appendChild(task);
+
+  const deleteBtn = document.createElement("span");
+  deleteBtn.innerText = "Delete task";
+  deleteBtn.innerHTML = "<ion-icon name='trash-bin-outline'></ion-icon>";
+  list.appendChild(deleteBtn);
 
   taskNameInput.value = "";
 
   task.addEventListener("click", (event) => {
     task.classList.toggle("checked-task");
   });
+
+  deleteBtn.addEventListener("click", (event) => {
+    task.remove();
+    deleteBtn.remove();
+  });
 });
 
-/* const completedTask = document.getElementsByTagName("li");
-console.log(completedTask);
-completedTask.addEventListener("click", (event) => {}); */
+const taskElement = document.createElement("div");
