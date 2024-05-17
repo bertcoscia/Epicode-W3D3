@@ -1,4 +1,4 @@
-# Epicode-U1W3D3
+# Epicode-W3D3
  
 Scopo di questo esercizio è il corretto utilizzo del DOM per creare una task list (detta anche to-do list) dinamica in
 JavaScript.
